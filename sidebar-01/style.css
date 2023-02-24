@@ -1,0 +1,136 @@
+:root {
+	--width: 300px;
+	--width-collapsed: 50px;
+	--padding: 10px;
+
+	--bg-color: rgb(52, 52, 52);
+	--hover-color: rgb(23, 23, 23);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	margin-left: var(--width-collapsed);
+	/*background: #032c55;*/
+}
+
+.body__expanded {
+	margin-left: var(--width);
+}
+
+main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#sideMenu {
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	color: #fff;
+	background: var(--bg-color);
+}
+
+#sideMenu a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/*HEADER*/
+#menuHeader {
+	border-bottom: 1px solid var(--hover-color);
+}
+
+#headerTitle {
+	overflow: hidden;
+}
+
+#headerTitle, #headerBtn {
+	vertical-align: middle;
+}
+
+#headerBtn {
+	width: var(--width-collapsed);
+	padding: var(--padding);
+	display: inline-block;
+	color: #fff;
+	font-size: 1.8em;
+}
+
+/*PROFILE*/
+#menuProfile {
+	padding: var(--padding);
+	text-align: center;
+	border-bottom: 1px solid var(--hover-color);
+}
+
+#profilePhoto {
+	margin: 0 auto;
+	padding: var(--padding);
+}
+
+#profilePhoto ion-icon {
+	width: 60%;
+	font-size: 5em;
+	border-radius: 50%;
+}
+
+#profilePhoto, #profileName {
+	padding: var(--padding);
+	font-size: 24px;
+	overflow: hidden;
+}
+
+/*ITEMS*/
+#menuItems {
+	overflow: hidden;
+}
+
+.item {
+	width: var(--width);
+	padding: 5px 0;
+	border-bottom: 1px solid var(--hover-color);
+}
+
+.item--icon {
+	width: var(--width-collapsed);
+	padding: var(--padding);
+}
+
+.item--icon ion-icon {
+	font-size: 1.8em;
+}
+
+.item--title {
+	padding: var(--padding) 0;
+}
+
+.item--icon, .item--title {
+	display: inline-block;
+	font-size: 14px;
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+.item a {
+	display: block;
+}
+
+
+
+
+@media (hover: hover) {
+	#headerBtn:hover {
+		cursor: pointer;
+		background: var(--hover-color);
+	}
+	.item a:hover {
+		background: var(--hover-color);
+	}
+}
