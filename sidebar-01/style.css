@@ -18,7 +18,7 @@ body {
 	/*background: #032c55;*/
 }
 
-.body__expanded {
+.body-expanded {
 	margin-left: var(--width);
 }
 
@@ -57,15 +57,16 @@ main {
 
 #headerBtn {
 	width: var(--width-collapsed);
+	height: 50px;
 	padding: var(--padding);
-	display: inline-block;
+	display: inline-block;	
 	color: #fff;
-	font-size: 1.8em;
+	font-size: 2em;
 }
 
 /*PROFILE*/
 #menuProfile {
-	padding: var(--padding);
+	padding: var(--padding) 0;
 	text-align: center;
 	border-bottom: 1px solid var(--hover-color);
 }
@@ -75,14 +76,13 @@ main {
 	padding: var(--padding);
 }
 
-#profilePhoto ion-icon {
-	width: 60%;
-	font-size: 5em;
+#profilePhoto img {
+	width: 50%;
 	border-radius: 50%;
 }
 
 #profilePhoto, #profileName {
-	padding: var(--padding);
+	padding: var(--padding) 0;
 	font-size: 24px;
 	overflow: hidden;
 }
@@ -120,6 +120,53 @@ main {
 
 .item a {
 	display: block;
+}
+
+/*MENU EXPANDED*/
+.menu-expanded {
+	width: var(--width);
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.menu-expanded #headerTitle {
+	width: calc(100% - 50px);
+	margin-right: -5px;
+	padding: var(--padding);
+	display: inline-block;
+}
+
+.menu-expanded #headerTitle span {
+	width: calc(var(--width) - var(--width-collapsed) - 5px);
+	display: inline-block;
+	overflow: hidden;
+}
+
+.menu-expanded #profilePhoto {
+	width: 200px;
+}
+
+.menu-expanded #profileName {
+	width: 100%;
+}
+
+/*MENU COLLAPSED*/
+.menu-collapsed {
+	width: var(--width-collapsed);
+}
+
+.menu-collapsed #headerTitle, .menu-collapsed .item--title {
+	width: 0;
+	height: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.menu-collapsed #profileName {
+	display: none;
+}
+
+.menu-collapsed .item {
+	width: 100px;
 }
 
 

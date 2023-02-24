@@ -8,7 +8,7 @@
 </head>
 <body>
 	
-	<div id="sideMenu" class="menu__collapsed">
+	<div id="sideMenu" class="menu-collapsed">
 		
 		<div id="menuHeader">
 			<div id="headerTitle">
@@ -21,7 +21,7 @@
 
 		<div id="menuProfile">
 			<div id="profilePhoto">
-				<ion-icon name="person-circle-outline"></ion-icon>
+				<img src="https://e7.pngegg.com/pngimages/902/303/png-clipart-computer-icons-user-profile-avatar-heroes-monochrome-thumbnail.png" alt="">
 			</div>
 			<div id="profileName">
 				<span>Marcos Gutierrez</span>
@@ -40,7 +40,7 @@
 					</div>
 				</a>
 			</div>
-			
+
 		</div>
 
 	</div>
@@ -52,5 +52,17 @@
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+	<script>
+		const sideMenu = document.getElementById('sideMenu');
+		const headerBtn = document.getElementById('headerBtn');
+		const body = document.querySelector('body');
+
+		headerBtn.addEventListener('click', (e) => {
+			sideMenu.classList.toggle('menu-expanded');
+			sideMenu.classList.toggle('menu-collapsed');
+
+			body.classList.toggle('body-expanded');
+		});
+	</script>
 </body>
 </html>
