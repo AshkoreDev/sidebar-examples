@@ -121,6 +121,7 @@ nav {
 }
 
 .nav--name {
+	display: none;
 	font-size: var(--tiny-font-size);
 }
 
@@ -129,6 +130,16 @@ nav {
 	color: var(--first-color);
 	transition: .3s;
 }
+
+.active-link::before {
+		content: '';
+		width: 4px;
+		height: 4px;
+		position: absolute;
+		bottom: -.6rem;
+		border-radius: 50%;
+		background: var(--first-color);
+	}
 
 .scroll-header {
 	box-shadow: 0 1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
@@ -140,12 +151,6 @@ nav {
 	:root {
 		--h1-font-size: 2.25rem;
 		--normal-font-size: 1rem;
-	}
-}
-
-@media screen and (max-width: 320px) {
-	.nav--name {
-		display: none;
 	}
 }
 
@@ -173,19 +178,17 @@ nav {
 		display: none;
 	}
 	.nav--name {
-		 font-size: var(--normal-font-size);
+		display: block;
+		font-size: var(--normal-font-size);
 	}
 	.nav__link:hover {
 		color: var(--first-color);
 	}
-	.active-link::before {
-		content: '';
-		width: 4px;
-		height: 4px;
-		position: absolute;
-		bottom: -.75rem;
-		border-radius: 50%;
-		background: var(--first-color);
+}
+
+@media screen and (min-width: 1024px) {
+	.container {
+		margin: 0 auto;
 	}
 }
 
