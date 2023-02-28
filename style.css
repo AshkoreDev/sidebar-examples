@@ -1,0 +1,31 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #222327;
+}
+
+li {
+	margin: 20px 0;
+	list-style: none;
+}
+
+a {
+	padding: 10px;
+	color: #aeaeae;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #fff;
+	background: #0b2;
+}
