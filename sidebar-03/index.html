@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Aracely Alba">
+	<meta name="description" content="SideBar Menu 03">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SideBar Menu - 03</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	
+	<div class="navigation">
+		<ul>
+			<li class="item">
+				<a href="#">
+					<span class="item--icon">
+						<ion-icon name="logo-apple"></ion-icon>
+					</span>
+					<span  class="item--title">Brand Name</span>
+				</a>
+			</li>
+			<li class="item">
+				<a href="#">
+					<span class="item--icon">
+						<ion-icon name="home-outline"></ion-icon>
+					</span>
+					<span  class="item--title">Dashboard</span>
+				</a>
+			</li>
+			<li class="item">
+				<a href="#">
+					<span class="item--icon">
+						<ion-icon name="person-outline"></ion-icon>
+					</span>
+					<span  class="item--title">Customers</span>
+				</a>
+			</li>
+			<li class="item">
+				<a href="#">
+					<span class="item--icon">
+						<ion-icon name="chatbubble-outline"></ion-icon>
+					</span>
+					<span  class="item--title">Messages</span>
+				</a>
+			</li>
+			<li class="item">
+				<a href="#">
+					<span class="item--icon">
+						<ion-icon name="help-outline"></ion-icon>
+					</span>
+					<span  class="item--title">Help</span>
+				</a>
+			</li>
+			<li class="item">
+				<a href="#">
+					<span class="item--icon">
+						<ion-icon name="settings-outline"></ion-icon>
+					</span>
+					<span  class="item--title">Settings</span>
+				</a>
+			</li>
+			<li class="item">
+				<a href="#">
+					<span class="item--icon">
+						<ion-icon name="lock-closed-outline"></ion-icon>
+					</span>
+					<span  class="item--title">Password</span>
+				</a>
+			</li>
+			<li class="item">
+				<a href="#">
+					<span class="item--icon">
+						<ion-icon name="log-out-outline"></ion-icon>
+					</span>
+					<span  class="item--title">Sign Out</span>
+				</a>
+			</li>
+		</ul>
+		<div class="menu--icon"></div>
+	</div>
+
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+	<script>
+		const navigation = document.querySelector('.navigation');
+		const menuIcon = document.querySelector('.menu--icon');
+
+		menuIcon.onclick = function() {
+			navigation.classList.toggle('active');
+		}
+	</script>
+
+</body>
+</html>
