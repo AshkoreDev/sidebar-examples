@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Aracely Alba">
+	<meta name="description" content="SideBar Menu 04">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SideBar Menu - 04</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	
+	<div class="navigation">
+		<div class="menu-toggle"></div>
+
+		<ul>
+			<li class="item active" style="--clr: #f44336;">
+				<a href="#">
+					<span class="item--icon">
+						<ion-icon name="home-outline"></ion-icon>
+					</span>
+					<span class="item--text">Home</span>
+				</a>
+			</li>
+			<li class="item" style="--clr: #ffa117;">
+				<a href="#">
+					<span class="item--icon">
+						<ion-icon name="person-outline"></ion-icon>
+					</span>
+					<span class="item--text">About</span>
+				</a>
+			</li>
+			<li class="item" style="--clr: #0fc70f;">
+				<a href="#">
+					<span class="item--icon">
+						<ion-icon name="chatbubble-outline"></ion-icon>
+					</span>
+					<span class="item--text">Messages</span>
+				</a>
+			</li>
+			<li class="item" style="--clr: #2196f3;">
+				<a href="#">
+					<span class="item--icon">
+						<ion-icon name="camera-outline"></ion-icon>
+					</span>
+					<span class="item--text">Photos</span>
+				</a>
+			</li>
+			<li class="item" style="--clr: #b145e9;">
+				<a href="#">
+					<span class="item--icon">
+						<ion-icon name="settings-outline"></ion-icon>
+					</span>
+					<span class="item--text">Settings</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+	<script>
+		const navigation = document.querySelector('.navigation');
+		const menuToggle = document.querySelector('.menu-toggle');
+
+		menuToggle.onclick = function() {
+
+			navigation.classList.toggle('open');
+		};
+
+		const items = document.querySelectorAll('.item');
+
+		function activeLink() {
+
+			items.forEach((item) => {
+
+				item.classList.remove('active');
+				
+			});
+			this.classList.add('active');
+		}
+
+		items.forEach((item) => item.addEventListener('click', activeLink))
+	</script>
+
+</body>
+</html>
