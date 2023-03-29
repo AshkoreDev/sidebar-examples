@@ -1,0 +1,155 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background: #3d4152;
+}
+
+.navigation {
+	width: 75px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	inset: 20px 0 20px 20px;
+	background: #fff;
+	transition: 0.5s;
+}
+
+.navigation.open {
+	width: 250px;
+}
+
+.menu-toggle {
+	width: 100%;
+	height: 60px;
+	padding: 0 23px;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+
+.menu-toggle::before {
+	content: '';
+	width: 30px;
+	height: 2px;
+	position: absolute;
+	background: #333;
+	transform: translateY(-8px);
+	transition: 0.5s;
+}
+
+.navigation.open .menu-toggle::before {
+	transform: translateY(0) rotate(45deg);
+}
+
+.menu-toggle::after {
+	content: '';
+	width: 30px;
+	height: 2px;
+	position: absolute;
+	background: #333;
+	transform: translateY(8px);
+	transition: 0.5s;
+	box-shadow: 0 -8px 0 #333;
+}
+
+.navigation.open .menu-toggle::after {
+	transform: translateY(0) rotate(-45deg);
+	box-shadow: 0 0 0 #333;
+}
+
+ul {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.item {
+	width: 100%;
+	height: 60px;
+	padding: 0 10px;
+	list-style: none;
+	position: relative;
+	transition: 0.5s;
+}
+
+.item.active {
+	transform: translateX(30px);
+}
+
+.navigation.open .item.active {
+	transform: translateX(10px);
+}
+
+.item a {
+	display: flex;
+	align-items: center;
+	position: relative;
+	text-align: center;
+	text-decoration: none;s
+}
+
+.item--icon { 
+	min-width: 55px;
+	height: 55px;
+	display: block;
+	position: relative;
+	color: #222;
+	font-size: 1.75em;
+	line-height: 60px;
+	border-radius: 10px;
+	transition: 0.5s;
+}
+
+.item.active .item--icon {
+	color: #fff;
+	background: var(--clr);
+}
+
+.item--icon::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	background: var(--clr);
+	opacity: 0;
+	filter: blur(8px);
+	transition: 0.5s;
+}
+
+.item.active .item--icon::before {
+	opacity: 0.5;
+}
+
+.item--text {
+	height: 60px;
+	padding: 0 15px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	color: #333;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.5s;
+}
+
+.navigation.open .item--text {
+	opacity: 1;
+	visibility: visible;
+}
+
+.item.active .item--text {
+	color: var(--clr);
+}
